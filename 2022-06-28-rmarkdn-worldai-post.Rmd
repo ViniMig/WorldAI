@@ -1,0 +1,41 @@
+---
+layout: post
+title: "What you talkin' AIbout?"
+output: html_document
+date: '2022-06-28'
+runtime: shiny
+comments: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This page today is a bit special!
+
+In first place, because it is not just a Markdown page, it is R Markdown!!! That's right, this dude is evolving.
+
+In second place, but definitely more specially, because I am using this to display the very very very first little part of a project a good friend of mine, directly from Crotone, Italia, Guido talked to me about. Together we came up with this first plan to get a "World map of AI". Getting together both our incredible curiousity and interest in the field and everything around it and starting to bring it around!
+
+For that, and not telling about the whole masterplan of course (it is Guido's plan to share and put in practice), I built a Shiny app to display some gathered data from social networks (first from Twitter, which is the only data represented at the time of writing) and share it in a map. This way we can try first to understand which countries are talking more about AI, or some related keywords, and allow people to go and see what is it that others are sharing about it.
+
+Additionally there is a small wordmap of the most related words present in the "posts".
+
+It is something small, but finally it seems I managed to get a place to actually "publish" this first part. This may be the trigger to do some more work and improve the data displayed both in quantity as in quality (of the visuals and analytics).
+
+
+## United World of AI
+
+Without further ado, and only with much much delay, Guido, here goes the map, finally accessible by the web!
+
+```{r tabsets, echo=FALSE}
+shinyAppDir(
+  getwd(),
+  options = list(
+    width = "100%", height = 550
+  )
+)
+```
+
+
+
