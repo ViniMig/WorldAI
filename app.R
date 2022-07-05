@@ -6,9 +6,9 @@ library(RColorBrewer)
 library(threejs)
 library(dplyr)
 
-# find best way to store data in cloud and download it when executing app to guarantee updated data
-datapath <- Sys.getenv("retrieved_data_path")
-worldAIdata <- readRDS(datapath)
+# load data available in github
+dataurl <- "https://raw.githubusercontent.com/ViniMig/vini-data/main/retrieved_data"
+worldAIdata <- readRDS(gzcon(url(dataurl)))
 
 #subset and group counts per country
 countryFreqs <- worldAIdata %>%
